@@ -23,14 +23,39 @@ const getHumanChoice = () => {
     }
 };
 
-const playRound(computerChoice, humanChoice) {
-    if (computerChoice === humanChoice) {
-        return "Draw"
-    } else if(computerChoice === "Rock" && humanChoice === "Paper") {
-        humanScore++
-        return "Human Wins"
+function playRound(humanChoice, computerChoice){
+    if (humanChoice === computerChoice){
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("It is a draw no one wins!!")
+    } else if (humanChoice === "Rock" && computerChoice === "Scissor") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Human Wins this Round and gains 1 point!!")
+    } else if (humanChoice === "Rock" && computerChoice === "Paper") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Computer Wins this Round and gains 1 point!!")
+    } else if (humanChoice === "Paper" && computerChoice === "Scissor") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Computer Wins this Round and gains 1 point!!")
+    } else if (humanChoice === "Paper" && computerChoice === "Rock") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Human Wins this Round and gains 1 point!!")
+    } else if (humanChoice === "Scissor" && computerChoice === "Rock") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Computer Wins this Round and gains 1 point!!")
+    } else if (humanChoice === "Scissor" && computerChoice === "Paper") {
+        console.log("Human Chose: ", humanChoice)
+        console.log("Computer Chose: ", computerChoice)
+        console.log("Human Wins this Round and gains 1 point!!")
     }
-};
+}
+
+function playGame()
 
 const humanSelection = getHumanChoice()
 const computerSelection = getComputerChoice()
